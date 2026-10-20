@@ -6,12 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171715">
 
-  <title>Carter Cruz — Percussionist</title>
-  <meta name="description" content="Carter Cruz is a percussionist and musician exploring performance, recording, and the art of sound. Discover compositions, performances, and creative projects.">
-
-  <meta property="og:title" content="Carter Cruz | Cruz.Frequency">
-  <meta property="og:description" content="Performance, recording, and sound. The musical portfolio of Carter Cruz.">
-  <meta property="og:type" content="website">
+  <title>Carter Cruz | Percussionist & Composer</title>
+  <meta name="description" content="Carter Cruz is a percussionist and composer studying at The Hartt School, exploring orchestral music, composition, and a future in film scoring.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +21,13 @@
       --text: #f1eee6;
       --muted: #aaa79d;
       --accent: #d88c5b;
-      --line: rgba(241, 238, 230, .13);
+      --line: rgba(241,238,230,.13);
       --serif: "Playfair Display", Georgia, serif;
       --sans: "DM Sans", sans-serif;
       --width: 1120px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
@@ -50,22 +42,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    body, button, input {
-      font-family: var(--sans);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     a:focus-visible, button:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 5px;
-    }
-
-    button {
-      color: inherit;
     }
 
     .container {
@@ -76,44 +57,30 @@
     .eyebrow {
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: .2em;
+      letter-spacing: .19em;
       font-size: .7rem;
       font-weight: 700;
     }
 
-    h1, h2, h3 {
-      font-weight: 500;
-      line-height: 1.15;
-    }
-
-    h1, h2, .serif {
-      font-family: var(--serif);
-    }
+    h1, h2, h3 { font-weight: 500; line-height: 1.15; }
+    h1, h2, .serif { font-family: var(--serif); }
 
     h2 {
       font-size: clamp(2.2rem, 5vw, 3.8rem);
       letter-spacing: -.04em;
     }
 
-    .section {
-      padding: 105px 0;
-    }
+    .section { padding: 100px 0; }
+    .muted { color: var(--muted); }
+    .accent { color: var(--accent); }
 
-    .muted {
-      color: var(--muted);
-    }
-
-    .accent {
-      color: var(--accent);
-    }
-
-    /* Header */
+    /* Navigation */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(23, 23, 21, .93);
+      background: rgba(23,23,21,.94);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--line);
     }
@@ -128,28 +95,22 @@
 
     .brand {
       font-family: var(--serif);
-      font-size: 1.2rem;
-      letter-spacing: .02em;
+      font-size: 1.15rem;
       white-space: nowrap;
     }
 
-    .brand span {
-      color: var(--accent);
-    }
+    .brand span { color: var(--accent); }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 27px;
+      gap: 25px;
       list-style: none;
-      font-size: .8rem;
       color: var(--muted);
+      font-size: .8rem;
     }
 
-    .nav-links a:hover,
-    .social-link:hover {
-      color: var(--accent);
-    }
+    .nav-links a:hover, .social-link:hover { color: var(--accent); }
 
     .nav-links .nav-contact {
       border: 1px solid var(--line);
@@ -164,18 +125,19 @@
       border-radius: 4px;
       padding: 8px 12px;
       background: transparent;
+      color: var(--text);
       cursor: pointer;
     }
 
     /* Hero */
 
     .hero {
-      min-height: 700px;
+      min-height: 680px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-top: 95px;
+      padding-top: 90px;
       padding-bottom: 75px;
     }
 
@@ -184,21 +146,16 @@
       position: absolute;
       width: 520px;
       height: 520px;
-      right: -170px;
-      top: 70px;
-      border: 1px solid rgba(216, 140, 91, .18);
+      right: -180px;
+      top: 60px;
+      border: 1px solid rgba(216,140,91,.18);
       border-radius: 50%;
-      box-shadow:
-        0 0 0 55px rgba(216, 140, 91, .025),
-        0 0 0 110px rgba(216, 140, 91, .02);
+      box-shadow: 0 0 0 60px rgba(216,140,91,.025),
+                  0 0 0 120px rgba(216,140,91,.018);
       pointer-events: none;
     }
 
-    .hero-content {
-      max-width: 900px;
-      position: relative;
-      z-index: 1;
-    }
+    .hero-content { max-width: 900px; position: relative; z-index: 1; }
 
     .hero-kicker {
       display: flex;
@@ -210,26 +167,25 @@
     .status-dot {
       width: 7px;
       height: 7px;
-      border-radius: 50%;
       background: var(--accent);
-      flex-shrink: 0;
+      border-radius: 50%;
     }
 
     .hero h1 {
-      font-size: clamp(4rem, 10vw, 8.2rem);
+      font-size: clamp(4rem, 10vw, 8rem);
       letter-spacing: -.075em;
       line-height: .99;
       margin-bottom: 28px;
     }
 
-    .hero h1 em {
+    .hero h1 em, .contact h2 em {
       color: var(--accent);
       font-weight: 500;
     }
 
     .hero-description {
+      max-width: 590px;
       color: var(--muted);
-      max-width: 570px;
       font-size: 1.04rem;
       margin-bottom: 32px;
     }
@@ -251,12 +207,10 @@
       border-radius: 4px;
       font-size: .83rem;
       font-weight: 600;
-      transition: transform .2s, background .2s, border-color .2s;
+      transition: transform .2s, background .2s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
+    .button:hover { transform: translateY(-2px); }
 
     .button-primary {
       background: var(--accent);
@@ -264,80 +218,93 @@
       border-color: var(--accent);
     }
 
-    .button-primary:hover {
-      background: #e8a476;
-    }
+    .button-primary:hover { background: #e8a476; }
 
     .hero-bottom {
-      margin-top: 80px;
+      margin-top: 75px;
       padding-top: 20px;
       border-top: 1px solid var(--line);
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 15px 26px;
     }
 
     .hero-bottom span {
-      font-size: .73rem;
-      letter-spacing: .07em;
       color: var(--muted);
+      font-size: .73rem;
+      letter-spacing: .04em;
     }
 
     .hero-bottom span::before {
       content: "✳";
       color: var(--accent);
-      margin-right: 10px;
+      margin-right: 9px;
     }
 
-    /* Featured recording */
+    /* Section headings */
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 { margin-top: 14px; }
+
+    .section-heading > p {
+      max-width: 400px;
+      color: var(--muted);
+      font-size: .91rem;
+    }
+
+    /* Featured composition */
 
     .featured {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
       background:
-        radial-gradient(ellipse at 100% 0%, rgba(216, 140, 91, .09), transparent 45%),
+        radial-gradient(ellipse at 100% 0%, rgba(216,140,91,.09), transparent 45%),
         #1c1c19;
+      border-block: 1px solid var(--line);
     }
 
     .featured-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+      gap: 65px;
       align-items: center;
     }
 
     .featured-art {
       aspect-ratio: 1 / 1;
-      position: relative;
-      overflow: hidden;
+      padding: 26px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 28px;
+      position: relative;
+      overflow: hidden;
       background:
-        radial-gradient(ellipse at 50% 45%, rgba(216,140,91,.22), transparent 42%),
+        radial-gradient(ellipse at 50% 45%, rgba(216,140,91,.22), transparent 43%),
         linear-gradient(145deg, #33332c, #191917 75%);
       border: 1px solid var(--line);
     }
 
-    .featured-art::before,
-    .featured-art::after {
+    .featured-art::before, .featured-art::after {
       content: "";
       position: absolute;
-      border: 1px solid rgba(216,140,91,.25);
-      border-radius: 50%;
-      width: 65%;
+      width: 66%;
       aspect-ratio: 1;
-      top: 17%;
       left: 17%;
+      top: 17%;
+      border: 1px solid rgba(216,140,91,.27);
+      border-radius: 50%;
     }
 
     .featured-art::after {
       width: 43%;
-      top: 28%;
-      left: 28%;
-      border-color: rgba(241,238,230,.17);
+      left: 28.5%;
+      top: 28.5%;
+      border-color: rgba(241,238,230,.18);
     }
 
     .art-top, .art-bottom {
@@ -345,64 +312,111 @@
       z-index: 1;
       display: flex;
       justify-content: space-between;
-      gap: 15px;
-      font-size: .7rem;
-      letter-spacing: .13em;
-      text-transform: uppercase;
+      gap: 12px;
       color: var(--muted);
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
     }
 
     .art-center {
       position: relative;
       z-index: 1;
       font-family: var(--serif);
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      text-align: center;
-      letter-spacing: -.07em;
+      font-size: clamp(2.7rem, 6vw, 5rem);
       line-height: 1;
+      letter-spacing: -.06em;
+      text-align: center;
     }
 
-    .featured-copy h2 {
-      margin: 16px 0 20px;
-    }
+    .featured-copy h2 { margin: 16px 0 20px; }
 
     .featured-copy > p:not(.eyebrow) {
       color: var(--muted);
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .note {
+      margin: 24px 0;
       padding: 14px 16px;
-      margin: 25px 0;
-      border-left: 2px solid var(--accent);
       background: rgba(255,255,255,.025);
+      border-left: 2px solid var(--accent);
       color: var(--muted);
       font-size: .8rem;
     }
 
-    /* General section headings */
+    /* Audio portfolio */
 
-    .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 42px;
+    .audio-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
 
-    .section-heading h2 {
-      margin-top: 14px;
+    .audio-card {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      gap: 20px;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      align-items: start;
     }
 
-    .section-heading > p {
-      max-width: 390px;
+    .audio-number {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      background: var(--surface2);
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 1.5rem;
+    }
+
+    .audio-info h3 {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      margin-bottom: 5px;
+    }
+
+    .audio-meta {
+      color: var(--accent);
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .audio-info > p:not(.audio-meta) {
       color: var(--muted);
-      font-size: .92rem;
+      font-size: .86rem;
+      margin-bottom: 15px;
     }
 
-    /* Portfolio cards */
+    audio {
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      height: 42px;
+      accent-color: var(--accent);
+    }
 
-    .portfolio-grid {
+    .audio-help {
+      color: var(--muted);
+      font-size: .78rem;
+      margin-top: 22px;
+    }
+
+    /* General project cards */
+
+    .portfolio {
+      background: #1c1c19;
+      border-block: 1px solid var(--line);
+    }
+
+    .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
@@ -425,10 +439,10 @@
       aspect-ratio: 16 / 9;
       padding: 22px;
       display: flex;
-      justify-content: space-between;
       align-items: end;
+      justify-content: space-between;
       background:
-        radial-gradient(ellipse at 80% 20%, rgba(216,140,91,.20), transparent 40%),
+        radial-gradient(ellipse at 80% 20%, rgba(216,140,91,.2), transparent 40%),
         linear-gradient(140deg, #30302a, #191917);
       border-bottom: 1px solid var(--line);
     }
@@ -447,9 +461,7 @@
       text-transform: uppercase;
     }
 
-    .project-body {
-      padding: 24px;
-    }
+    .project-body { padding: 24px; }
 
     .project-meta {
       color: var(--accent);
@@ -460,7 +472,7 @@
 
     .project h3 {
       font-family: var(--serif);
-      font-size: 1.65rem;
+      font-size: 1.6rem;
       margin: 10px 0;
     }
 
@@ -474,29 +486,18 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      font-size: .8rem;
+      font-size: .81rem;
       font-weight: 600;
     }
 
     .text-link span {
       color: var(--accent);
-    }
-
-    .text-link:hover span {
-      transform: translateX(4px);
-    }
-
-    .text-link span {
-      display: inline-block;
       transition: transform .2s;
     }
 
-    /* About */
+    .text-link:hover span { transform: translateX(4px); }
 
-    .about {
-      border-top: 1px solid var(--line);
-      background: #1c1c19;
-    }
+    /* About */
 
     .about-grid {
       display: grid;
@@ -505,40 +506,81 @@
       align-items: start;
     }
 
-    .about-heading h2 {
-      margin-top: 17px;
-    }
-
     .about-copy p {
       color: var(--muted);
       font-size: .98rem;
       margin-bottom: 20px;
     }
 
-    .about-copy strong {
-      color: var(--text);
-    }
+    .about-copy strong { color: var(--text); }
 
     .about-quote {
-      margin-top: 30px;
+      margin-top: 28px;
       padding: 20px 0 20px 24px;
       border-left: 2px solid var(--accent);
       font-family: var(--serif);
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       line-height: 1.55;
+    }
+
+    /* Commissions */
+
+    .commissions {
+      background:
+        radial-gradient(ellipse at 100% 100%, rgba(216,140,91,.09), transparent 50%),
+        #1c1c19;
+      border-block: 1px solid var(--line);
+    }
+
+    .commission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .commission-copy h2 { margin: 16px 0 22px; }
+
+    .commission-copy > p:not(.eyebrow) {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .specialty-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .specialty {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .specialty span:first-child {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+    }
+
+    .specialty span:last-child {
+      color: var(--accent);
+      font-size: .72rem;
+      text-align: right;
     }
 
     /* Experience */
 
-    .experience-list {
-      border-top: 1px solid var(--line);
-    }
+    .experience-list { border-top: 1px solid var(--line); }
 
     .experience-item {
       display: grid;
       grid-template-columns: 165px 1fr;
       gap: 32px;
-      padding: 28px 0;
+      padding: 27px 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -560,9 +602,9 @@
     }
 
     .credentials-note {
-      margin-top: 25px;
-      font-size: .78rem;
+      margin-top: 22px;
       color: var(--muted);
+      font-size: .78rem;
     }
 
     /* Contact */
@@ -575,28 +617,33 @@
       text-align: center;
     }
 
-    .contact-inner {
-      max-width: 750px;
-      margin: auto;
-    }
+    .contact-inner { max-width: 750px; margin: auto; }
 
-    .contact h2 {
-      margin: 20px 0;
-    }
-
-    .contact h2 em {
-      color: var(--accent);
-      font-weight: 500;
-    }
+    .contact h2 { margin: 20px 0; }
 
     .contact-inner > p:not(.eyebrow) {
-      max-width: 540px;
-      margin: 0 auto 28px;
+      max-width: 550px;
+      margin: 0 auto 26px;
       color: var(--muted);
     }
 
-    .contact .button-row {
-      justify-content: center;
+    .contact .button-row { justify-content: center; }
+
+    .business-email {
+      display: inline-block;
+      color: var(--text);
+      border-bottom: 1px solid var(--accent);
+      padding: 5px 0;
+      margin-top: 23px;
+      font-size: 1rem;
+      user-select: text;
+      overflow-wrap: anywhere;
+    }
+
+    .email-caption {
+      color: var(--muted);
+      font-size: .72rem;
+      margin-top: 6px;
     }
 
     .social-links {
@@ -604,13 +651,12 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 24px;
-      margin-top: 34px;
+      margin-top: 28px;
     }
 
     .social-link {
       color: var(--muted);
       font-size: .82rem;
-      transition: color .2s;
     }
 
     /* Footer */
@@ -628,28 +674,16 @@
       gap: 20px;
     }
 
-    .footer-inner a:hover {
-      color: var(--accent);
-    }
+    .footer-inner a:hover { color: var(--accent); }
 
     /* Mobile */
 
     @media (max-width: 760px) {
-      .container {
-        width: calc(100% - 36px);
-      }
+      .container { width: calc(100% - 36px); }
+      .section { padding: 72px 0; }
+      .nav { min-height: 68px; }
 
-      .section {
-        padding: 75px 0;
-      }
-
-      .nav {
-        min-height: 68px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
+      .menu-toggle { display: block; }
 
       .nav-links {
         display: none;
@@ -665,60 +699,45 @@
         border-bottom: 1px solid var(--line);
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
+      .nav-links .nav-contact { display: block; text-align: center; }
 
-      .nav-links .nav-contact {
-        display: block;
-        text-align: center;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 105px;
-      }
+      .hero { min-height: auto; padding-top: 100px; }
 
       .hero::before {
         width: 320px;
         height: 320px;
-        right: -230px;
+        right: -235px;
         top: 75px;
       }
 
-      .hero h1 {
-        font-size: clamp(3.5rem, 14vw, 5.7rem);
-      }
+      .hero h1 { font-size: clamp(3.4rem, 13vw, 5.5rem); }
 
-      .hero-bottom {
-        margin-top: 58px;
-        justify-content: flex-start;
-        gap: 15px 22px;
-      }
+      .hero-bottom { margin-top: 55px; }
 
       .section-heading {
         flex-direction: column;
         align-items: start;
       }
 
-      .featured-grid {
+      .featured-grid, .commission-grid, .about-grid {
         grid-template-columns: 1fr;
-        gap: 34px;
+        gap: 32px;
       }
 
-      .featured-art {
-        max-width: 520px;
-        width: 100%;
-        margin: auto;
+      .featured-art { max-width: 500px; width: 100%; margin: auto; }
+      .project-grid { grid-template-columns: 1fr; }
+
+      .audio-card {
+        grid-template-columns: 44px 1fr;
+        gap: 14px;
+        padding: 17px;
       }
 
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .audio-number {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
       }
 
       .experience-item {
@@ -726,21 +745,12 @@
         gap: 8px;
       }
 
-      .footer-inner {
-        flex-direction: column;
-        align-items: start;
-      }
+      .footer-inner { flex-direction: column; align-items: start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-      }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
@@ -751,19 +761,16 @@
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#home">CARTER CRUZ<span>.</span></a>
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-expanded="false"
-        aria-controls="navLinks"
-        type="button">
+      <button class="menu-toggle" id="menuToggle"
+        aria-expanded="false" aria-controls="navLinks" type="button">
         Menu
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#featured">Studio</a></li>
-        <li><a href="#portfolio">Selected Work</a></li>
+        <li><a href="#studio">Audio</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#commissions">Commissions</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a class="nav-contact" href="#contact">Contact ↗</a></li>
       </ul>
@@ -777,204 +784,402 @@
       <div class="hero-content">
         <div class="hero-kicker eyebrow">
           <span class="status-dot"></span>
-          Performer and Composer 
+          Percussionist · Composer
         </div>
 
         <h1>
-          Finding the<br>
-          sound of <em>something.</em>
+          Music for<br>
+          the <em>feeling.</em>
         </h1>
 
         <p class="hero-description">
-          I'm Carter Cruz. A musician interested in the space
-          between performance and composing. From the concert
-          stage to the studio, I'm drawn to the sounds that
-          help us feel something.
+          I'm Carter Cruz, a percussionist and composer studying
+          Percussion Performance at The Hartt School. I'm drawn to
+          music that tells a story, creates an atmosphere, and gives
+          a moment its own identity. My lifelong goal is to bring
+          that passion into film scoring.
         </p>
 
         <div class="button-row">
-          <a class="button button-primary" href="#portfolio">
-            Explore selected work ↗
+          <a class="button button-primary" href="#studio">
+            Listen to my work ↗
           </a>
-          <a class="button" href="#about">
-            Get to know me
+          <a class="button" href="#commissions">
+            Commission a composition
           </a>
         </div>
 
         <div class="hero-bottom">
-          <span>Performance</span>
-          <span>Recordings</span>
-          <span>Compositions</span>
+          <span>Orchestral music</span>
+          <span>Ambient sound</span>
+          <span>Composition</span>
+          <span>Film scoring</span>
         </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="section container" id="portfolio">
+    <!-- FEATURED INTRODUCTION -->
+    <section class="section featured">
+      <div class="container featured-grid">
+        <div class="featured-art" aria-label="Abstract portfolio artwork">
+          <div class="art-top">
+            <span>Cruz.Frequency</span>
+            <span>CC / 001</span>
+          </div>
+          <div class="art-center">Sound &<br><em>story.</em></div>
+          <div class="art-bottom">
+            <span>Percussion</span>
+            <span>Composition</span>
+          </div>
+        </div>
+
+        <div class="featured-copy">
+          <p class="eyebrow">01 / The creative direction</p>
+          <h2>Every sound<br>serves a purpose.</h2>
+
+          <p>
+            My foundation is percussion performance, but my musical
+            interests reach far beyond one instrument. I'm interested
+            in orchestral writing, atmosphere, texture, and the way
+            music can help an audience experience a story.
+          </p>
+
+          <p>
+            Film scoring is a lifelong goal I'm working toward.
+            In the meantime, this portfolio brings together my
+            performances, compositions, and musical development.
+          </p>
+
+          <div class="note">
+            Cruz.Frequency is my creative identity. This portfolio
+            will grow as I complete new pieces and performances.
+          </div>
+
+          <a class="text-link" href="#portfolio">
+            Explore selected work <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIO PLAYERS -->
+    <section class="section container" id="studio">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">01 / Selected work</p>
-          <h2>The portfolio.</h2>
+          <p class="eyebrow">02 / Listen</p>
+          <h2>Selected audio.</h2>
         </div>
         <p>
-          A growing collection of performances, recordings, and
-          creative projects. Each entry can link to the actual audio,
-          video, score, or project page.
+          A selection of my performances and compositions.
+          Use the players below to listen directly on this website.
         </p>
       </div>
 
-      <div class="portfolio-grid">
+      <div class="audio-list">
 
-        <article class="project">
-          <div class="project-art">
-            <span class="project-number">01</span>
-            <span class="project-type">Recording</span>
-          </div>
-          <div class="project-body">
-            <p class="project-meta">Studio · Audio</p>
-            <h3>Selected Recordings</h3>
+        <!-- AUDIO EXAMPLE 1
+             Put your MP3 in the audio folder.
+             Change the src filename to match your file. -->
+        <article class="audio-card">
+          <div class="audio-number">01</div>
+          <div class="audio-info">
+            <p class="audio-meta">Composition / Example 01</p>
+            <h3>Orchestral Work</h3>
             <p>
-              Percussion recordings and musical excerpts that
-              demonstrate tone, precision, interpretation, and
-              attention to detail.
+              An orchestral piece or excerpt. Replace this description
+              with the title, instrumentation, and background of your work.
             </p>
-            <!-- Replace # with a real recording URL. -->
-            <a class="text-link" href="#contact">
-              Recording links coming soon <span>↗</span>
-            </a>
+            <audio controls preload="none">
+              <source src="audio/orchestral-example.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+              <a href="audio/orchestral-example.mp3">Play or download the audio</a>.
+            </audio>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-art">
-            <span class="project-number">02</span>
-            <span class="project-type">Original work</span>
-          </div>
-          <div class="project-body">
-            <p class="project-meta">Creative · Composition</p>
-            <h3>Original Projects</h3>
+        <!-- AUDIO EXAMPLE 2 -->
+        <article class="audio-card">
+          <div class="audio-number">02</div>
+          <div class="audio-info">
+            <p class="audio-meta">Composition / Example 02</p>
+            <h3>Ambient Piece</h3>
             <p>
-              Original ideas, sound experiments, arrangements, and
-              creative collaborations developed through exploration.
+              An ambient, atmospheric, or experimental piece.
+              Describe the mood, sound palette, or inspiration here.
             </p>
-            <!-- Replace # with a real project URL. -->
-            <a class="text-link" href="#contact">
-              Project details coming soon <span>↗</span>
-            </a>
+            <audio controls preload="none">
+              <source src="audio/ambient-example.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+              <a href="audio/ambient-example.mp3">Play or download the audio</a>.
+            </audio>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-art">
-            <span class="project-number">03</span>
-            <span class="project-type">Performance</span>
-          </div>
-          <div class="project-body">
-            <p class="project-meta">Live · Percussion</p>
-            <h3>Performance Archive</h3>
+        <!-- AUDIO EXAMPLE 3 -->
+        <article class="audio-card">
+          <div class="audio-number">03</div>
+          <div class="audio-info">
+            <p class="audio-meta">Performance / Example 03</p>
+            <h3>Percussion Performance</h3>
             <p>
-              Solo repertoire, ensemble performances, and selected
-              concert recordings documenting my development as a
-              performer.
+              A solo, ensemble excerpt, or other performance.
+              Add the piece title, composer, and instrument here.
             </p>
-            <!-- Replace # with a real performance URL. -->
-            <a class="text-link" href="#experience">
-              Explore experience <span>↗</span>
-            </a>
+            <audio controls preload="none">
+              <source src="audio/percussion-example.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+              <a href="audio/percussion-example.mp3">Play or download the audio</a>.
+            </audio>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-art">
-            <span class="project-number">04</span>
-            <span class="project-type">Film & games</span>
-          </div>
-          <div class="project-body">
-            <p class="project-meta">Cinematic · Sound</p>
-            <h3>Sound & Storytelling</h3>
-            <p>
-              Exploring the connection between music, atmosphere,
-              and storytelling, with inspiration from film scores
-              and video game soundtracks.
-            </p>
-            <!-- Replace # with a real project URL. -->
-            <a class="text-link" href="#contact">
-              Creative work coming soon <span>↗</span>
-            </a>
-          </div>
-        </article>
+      </div>
 
+      <p class="audio-help">
+        Audio not playing? Make sure the MP3 exists in your repository
+        at the exact path shown in the player.
+      </p>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Selected work</p>
+            <h2>The portfolio.</h2>
+          </div>
+          <p>
+            Performances, original music, and musical resources
+            that document my development as a percussionist and composer.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project">
+            <div class="project-art">
+              <span class="project-number">01</span>
+              <span class="project-type">Composition</span>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Original music</p>
+              <h3>Original Compositions</h3>
+              <p>
+                Original pieces and musical ideas exploring orchestral
+                writing, ambience, texture, and storytelling.
+              </p>
+              <a class="text-link" href="#studio">
+                Listen to audio examples <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-art">
+              <span class="project-number">02</span>
+              <span class="project-type">Performance</span>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Percussion</p>
+              <h3>Performance Archive</h3>
+              <p>
+                Solo repertoire, ensemble performances, and selected
+                concert work from my percussion studies.
+              </p>
+              <a class="text-link" href="#experience">
+                View musical background <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-art">
+              <span class="project-number">03</span>
+              <span class="project-type">Film music</span>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Scoring aspirations</p>
+              <h3>Music for the Screen</h3>
+              <p>
+                An evolving collection of scoring exercises, cinematic
+                ideas, and music inspired by visual storytelling.
+                Add completed projects here as they become available.
+              </p>
+              <a class="text-link" href="#commissions">
+                Discuss a composition <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-art">
+              <span class="project-number">04</span>
+              <span class="project-type">Music resource</span>
+            </div>
+            <div class="project-body">
+              <p class="project-meta">Repertoire & research</p>
+              <h3>Music Citation List</h3>
+              <p>
+                My music citation list, organized in Google Sheets.
+                Visit the spreadsheet for the complete collection
+                of music references and citations.
+              </p>
+              <a class="text-link"
+                 href="https://docs.google.com/spreadsheets/d/15oT3SRur-8u9ufpNJPtWyW6r4LO5r2bPsPlDtly7mJk/edit?gid=0#gid=0"
+                 target="_blank" rel="noopener noreferrer">
+                Open music citation list <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section about" id="about">
-      <div class="container about-grid">
-        <div class="about-heading">
-          <p class="eyebrow">03 / Behind the sound</p>
-          <h2>The person<br>behind the music.</h2>
+    <section class="section container" id="about">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">04 / About Carter</p>
+          <h2 style="margin-top: 16px;">The person<br>behind the music.</h2>
         </div>
 
         <div class="about-copy">
-          <!-- Add your personal biography here when ready. -->
+          <!-- Expand or rewrite this biography whenever you are ready. -->
           <p>
-            I'm <strong>Carter Cruz</strong>, a percussionist whose
-            interests extend beyond the stage and into the world
-            of recording, audio, and musical storytelling.
+            I'm <strong>Carter Cruz</strong>, a percussionist and composer
+            currently studying Percussion Performance at
+            <strong>The Hartt School</strong>.
           </p>
 
           <p>
-            My background in percussion has shaped how I listen:
-            the smallest details in rhythm, articulation, texture,
-            and dynamics can change the feeling of an entire piece.
-            That attention to detail is something I want to carry
-            into every musical project I take on.
+            Percussion has shaped the way I listen to music. Rhythm,
+            tone, articulation, dynamics, and texture all influence
+            the way a piece communicates. Those same details inspire
+            my interest in composition and the possibilities of
+            combining sound with storytelling.
           </p>
 
           <p>
-            This website is an evolving record of that journey.
-            As I continue to perform, learn, record, and create,
-            it will become a home for the work I'm proud to share
-            and the projects I'm working toward.
+            One of my lifelong goals is to compose music for film.
+            I'm working toward that goal through performance,
+            studying music, writing, and exploring different
+            approaches to composition.
+          </p>
+
+          <p>
+            My musical interests include orchestral music, ambient
+            music, and other styles depending on the needs of a piece.
+            I enjoy being flexible and exploring different creative
+            directions rather than limiting myself to one sound.
           </p>
 
           <div class="about-quote">
-            "The goal isn't just to make sound. It's to make
-            someone feel something."
+            Music can tell a story before a single word is spoken.
           </div>
 
-          <p style="margin-top: 25px;">
-            <span class="accent">Cruz.Frequency</span> is the
-            creative identity behind this portfolio.
-          </p>
+          <!-- Add a longer personal biography here when ready. -->
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- COMPOSITIONS & COMMISSIONS -->
+    <section class="section commissions" id="commissions">
+      <div class="container commission-grid">
+        <div class="commission-copy">
+          <p class="eyebrow">05 / Work with me</p>
+          <h2>Let's create<br>something original.</h2>
+
+          <p>
+            I am open to composition commissions and enjoy working
+            with people who have a musical idea, a story to tell,
+            or a particular atmosphere they want to create.
+          </p>
+
+          <p>
+            Whether you need an orchestral piece, ambient music,
+            percussion-focused writing, or something in a different
+            style, I'm flexible and interested in adapting to the
+            needs of the project.
+          </p>
+
+          <p>
+            If you have an idea, feel free to reach out with the
+            intended use, instrumentation, approximate length,
+            timeline, and any musical references you have.
+          </p>
+
+          <a class="button button-primary" href="#contact">
+            Commission inquiry ↗
+          </a>
+        </div>
+
+        <div>
+          <p class="eyebrow" style="margin-bottom: 18px;">
+            Areas of interest
+          </p>
+
+          <div class="specialty-list">
+            <div class="specialty">
+              <span>Orchestral</span>
+              <span>ENSEMBLE / CINEMATIC</span>
+            </div>
+            <div class="specialty">
+              <span>Ambient</span>
+              <span>ATMOSPHERE / TEXTURE</span>
+            </div>
+            <div class="specialty">
+              <span>Percussion</span>
+              <span>RHYTHM / TIMBRE</span>
+            </div>
+            <div class="specialty">
+              <span>Film-inspired</span>
+              <span>MOOD / STORY</span>
+            </div>
+            <div class="specialty">
+              <span>Other styles</span>
+              <span>FLEXIBLE / PROJECT-BASED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & EXPERIENCE -->
     <section class="section container" id="experience">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">04 / Musical background</p>
-          <h2>Experience & credentials.</h2>
+          <p class="eyebrow">06 / Musical background</p>
+          <h2>Education & experience.</h2>
         </div>
         <p>
-          A professional overview of education, performance,
-          honors, and repertoire. Add dates and supporting links
-          to make each entry specific and verifiable.
+          My ongoing musical education, performance experience,
+          and achievements as a percussionist.
         </p>
       </div>
 
       <div class="experience-list">
 
         <article class="experience-item">
-          <span class="experience-label">Education</span>
+          <span class="experience-label">Current education</span>
+          <div>
+            <h3>The Hartt School</h3>
+            <p>
+              Studying Percussion Performance. Add your degree
+              details, expected graduation, faculty, or other
+              relevant information when you are ready.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <span class="experience-label">Previous education</span>
           <div>
             <h3>Las Vegas Academy of the Arts</h3>
             <p>
-              Percussion studies and musical development through
-              ensemble performance, solo repertoire, and artistic
-              training.
+              Previous musical studies, percussion training,
+              and performance opportunities.
             </p>
           </div>
         </article>
@@ -982,10 +1187,11 @@
         <article class="experience-item">
           <span class="experience-label">Recognition</span>
           <div>
-            <h3>Honor Band & All-State</h3>
+            <h3>Honors & Ensembles</h3>
             <p>
-              Add your participation years, ensemble names, and
-              relevant distinctions here.
+              Add your Honor Band, All-State, Solo & Ensemble,
+              and other confirmed honors, including years and
+              ensemble names.
             </p>
           </div>
         </article>
@@ -993,22 +1199,11 @@
         <article class="experience-item">
           <span class="experience-label">Repertoire</span>
           <div>
-            <h3>Solo & Ensemble</h3>
+            <h3>Selected Repertoire</h3>
             <p>
-              Add selected repertoire with composer names, instrument,
-              performance dates, and links to available recordings.
-            </p>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <span class="experience-label">Development</span>
-          <div>
-            <h3>Studio & Recording</h3>
-            <p>
-              Add recording sessions, production experience, audio
-              projects, and other relevant technical skills as
-              you develop them.
+              Add solo works, composers, instruments, and
+              recordings that best demonstrate your performance.
+              Your music citation list is linked in the portfolio.
             </p>
           </div>
         </article>
@@ -1016,49 +1211,43 @@
       </div>
 
       <p class="credentials-note">
-        Note: Update these entries to reflect your actual achievements
-        and experience before using the website as a formal résumé.
+        Update the optional details to reflect your current
+        education, confirmed accomplishments, and actual experience.
       </p>
     </section>
 
     <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="container contact-inner">
-        <p class="eyebrow">05 / Connect</p>
+        <p class="eyebrow">07 / Get in touch</p>
 
-        <h2>Let's make something<br><em>worth hearing.</em></h2>
+        <h2>Have an idea?<br><em>Let's talk music.</em></h2>
 
         <p>
-          For musical collaborations, performance opportunities,
-          recording projects, or professional inquiries, connect
-          with me through my social profiles.
+          For composition commissions, collaborations, performance
+          opportunities, or other musical inquiries, you can reach
+          me through the contact details below.
         </p>
 
-        <div class="button-row">
-          <!-- Replace the email address when you are ready. -->
-          <a class="button button-primary"
-             href="mailto:YOUR_EMAIL@example.com">
-            Email me ↗
-          </a>
-
-          <a class="button"
-             href="https://www.instagram.com/Cruz.Frequency/"
-             target="_blank" rel="noopener noreferrer">
-            Instagram ↗
-          </a>
+        <div class="business-email">
+          cartercruz0711@gmail.com
         </div>
+
+        <p class="email-caption">
+          Business inquiries · Copy the address to contact me
+        </p>
 
         <div class="social-links">
           <a class="social-link"
              href="https://www.instagram.com/Cruz.Frequency/"
              target="_blank" rel="noopener noreferrer">
-            Instagram / @Cruz.Frequency
+            Instagram / @Cruz.Frequency ↗
           </a>
 
           <a class="social-link"
              href="https://www.tiktok.com/@cruz.frequency"
              target="_blank" rel="noopener noreferrer">
-            TikTok / @cruz.frequency
+            TikTok / @cruz.frequency ↗
           </a>
         </div>
       </div>
@@ -1078,8 +1267,8 @@
     const navLinks = document.getElementById("navLinks");
 
     menuToggle.addEventListener("click", () => {
-      const open = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(open));
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     navLinks.querySelectorAll("a").forEach((link) => {
