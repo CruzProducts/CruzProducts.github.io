@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171715">
+  <title>About | Carter Cruz</title>
+  <meta name="description" content="Biography and musical background of Carter Cruz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html">CARTER CRUZ<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" type="button">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="commissions.html">Commissions</a></li>
+      <li><a class="nav-contact" href="commissions.html#contact">Contact ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-hero"><div class="container"><p class="eyebrow">About / Carter Cruz</p><h1>The person<br><em class="accent">behind the sound.</em></h1><p>A longer look at my musical background, the ideas that shape my work, and the direction I hope to take as a percussionist and composer.</p></div></section>
+<section class="section container" id="about">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / About</p>
+          <h2>Artist profile.</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            I am a percussionist and composer focused on creating music that
+            feels emotional, atmospheric, and meaningful. My work is rooted in
+            performance, but my curiosity extends into orchestral writing,
+            ambient textures, and the art of telling a story through sound.
+          </p>
+          <p>
+            <strong>Studying at The Hartt School</strong> has shaped my approach to
+            music deeply. I continue to develop as both a performer and a writer,
+            with a growing interest in cinematic language and the power of a well-
+            placed musical gesture.
+          </p>
+          <div class="about-quote">
+            “Music is most powerful when it gives a feeling a voice.”
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            My projects often begin with an image, a mood, or a memory that needs a
+            sound world to match it. Whether the result is a percussion performance,
+            a composition, or a more cinematic atmosphere, I aim for clarity,
+            emotion, and texture in equal measure.
+          </p>
+          <p>
+            I’m especially interested in the relationship between percussion and
+            narrative—how rhythm, silence, and color can create tension, motion,
+            and release. That interest continues to guide the music I make and the
+            goals I’m building toward.
+          </p>
+        </div>
+      </div>
+    </section>
+<section class="section container" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">06 / Experience</p>
+          <h2>Musical background.</h2>
+        </div>
+      </div>
+
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="experience-label">Education</div>
+          <div>
+            <h3>The Hartt School</h3>
+            <p>
+              Studying percussion performance with a growing focus on composition,
+              orchestration, and the artistic language of film music.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-label">Focus</div>
+          <div>
+            <h3>Percussion & composition</h3>
+            <p>
+              My practice combines performance fundamentals with creative exploration,
+              emphasizing rhythm, texture, and expressive storytelling through sound.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-label">Goal</div>
+          <div>
+            <h3>Film scoring</h3>
+            <p>
+              I am building toward a career in film scoring, where I can contribute
+              emotionally resonant music to visual storytelling.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="credentials-note">
+        Additional work and materials are being added as new projects are completed.
+      </p>
+    </section>
+
+</main>
+<footer><div class="container footer-inner"><span>© 2026 Carter Cruz</span><a href="index.html">Back home</a></div></footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+</script>
+
+</body>
+</html>
