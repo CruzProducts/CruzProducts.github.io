@@ -30,12 +30,24 @@
 
 <main>
 
-<section class="page-hero"><div class="container"><p class="eyebrow">Gallery / Visual archive</p><h1>Moments in<br><em class="accent">sound and image.</em></h1><p>Performance photography, studio portraits, and live moments from Carter’s work and practice.</p></div></section>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Gallery / Visual archive</p>
+    <h1>Moments in<br><em class="accent">sound and image.</em></h1>
+    <p>Performance photography, studio portraits, and live moments from Carter Cruz’s work across rehearsal, recording, and touring.</p>
+  </div>
+</section>
 
 <section class="section container">
-  <div class="section-heading"><div><p class="eyebrow"> Selected Images</p><h2>Performance & portraits.</h2></div><p>These gallery selections show the range of Carter’s musical career. Rehearsals, live performances, and portrait studies.</p></div>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Selected Images</p>
+      <h2>Performance & portraits.</h2>
+    </div>
+    <p>These gallery selections show the range of Carter’s musical career. Rehearsals, studio sessions, and live performance moments.</p>
+  </div>
   <div class="gallery-grid" id="galleryGrid"></div>
-  <div class="note"> <strong>images</strong> </div>
+  <div class="note"><strong>images</strong> from current select uploads</div>
 </section>
 
 </main>
@@ -56,17 +68,37 @@ const galleryEntries = [
   {
     src: 'images/Carter4_Original.jpg',
     alt: 'Carter Cruz portrait with natural light and a relaxed studio pose',
-    caption: 'Professional Portrait Photo
+    caption: 'Professional Portrait Photo'
   },
   {
     src: 'images/IMG_0927.jpg',
     alt: 'Additional Carter Cruz image from the new gallery upload',
-    caption: 'Percussionists Perform "Head Talk"
+    caption: 'Percussionists Perform "Head Talk"'
   },
   {
     src: 'images/Screenshot_20250605_165125_Gallery.JPEG',
     alt: 'Gallery preview image featuring Carter Cruz and performance photography',
     caption: 'North Texas Performance'
+  },
+  {
+    src: 'images/Carter3.JPEG',
+    alt: 'Carter Cruz portrait from a recent studio session',
+    caption: 'Studio Portrait'
+  },
+  {
+    src: 'images/184552b6-4775-450f-ac19-ba0e5890c122.JPG',
+    alt: 'Carter Cruz during a live performance setup',
+    caption: 'Live Music Moment'
+  },
+  {
+    src: 'images/58603ed8-3592-ad34-5f4f-9fb7b3e9e725.jpg',
+    alt: 'Carter Cruz rehearsing with a warm portrait lighting setup',
+    caption: 'Rehearsal Light Study'
+  },
+  {
+    src: 'images/Screenshot_20240307_165521_Gallery_Original%203.jpg',
+    alt: 'Carter Cruz gallery preview from an earlier performance shoot',
+    caption: 'Gallery Preview'
   }
 ];
 
@@ -81,6 +113,7 @@ if (galleryGrid) {
     img.src = entry.src;
     img.alt = entry.alt;
     img.loading = 'lazy';
+    img.decoding = 'async';
     img.onerror = function () {
       this.style.display = 'none';
       const placeholder = document.createElement('div');
@@ -105,7 +138,8 @@ if (menuToggle && navLinks) {
     const isOpen = navLinks.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
-  navLinks.querySelectorAll('a').forEach(link => {
+
+  navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
