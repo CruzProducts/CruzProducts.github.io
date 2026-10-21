@@ -34,38 +34,65 @@
 
 <section class="section container">
   <div class="section-heading"><div><p class="eyebrow">01 / Selected images</p><h2>Performance & portraiture.</h2></div><p>These gallery selections show the range of Carter’s musical life: rehearsal practice, studio recording, portrait work, and live marimba performance.</p></div>
-  <div class="gallery-grid">
-    <figure class="gallery-item">
-      <img src="images/gallery-home-drum-kit.jpg" alt="Carter playing a full drum kit in a home rehearsal space" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="gallery-placeholder" style="display:none;"><strong>Home kit</strong><span>Photo coming soon</span></div>
-      <figcaption>Home rehearsal setup</figcaption>
-    </figure>
-
-    <figure class="gallery-item">
-      <img src="images/gallery-studio-recording.jpg" alt="Carter in a studio rehearsal setup with drums, lights, and camera gear" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="gallery-placeholder" style="display:none;"><strong>Studio</strong><span>Photo coming soon</span></div>
-      <figcaption>Studio recording session</figcaption>
-    </figure>
-
-    <figure class="gallery-item">
-      <img src="images/gallery-portrait.jpg" alt="Portrait of Carter Cruz with glasses, long hair, and drumsticks" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="gallery-placeholder" style="display:none;"><strong>Portrait</strong><span>Photo coming soon</span></div>
-      <figcaption>Portrait study</figcaption>
-    </figure>
-
-    <figure class="gallery-item">
-      <img src="images/gallery-marimba.jpg" alt="Carter performing on a large marimba in a concert hall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="gallery-placeholder" style="display:none;"><strong>Marimba</strong><span>Photo coming soon</span></div>
-      <figcaption>Live marimba performance</figcaption>
-    </figure>
-  </div>
-  <div class="note">To add a photo: upload it into the repository’s <strong>images</strong> folder, then keep the filename matching the corresponding <code>src</code> above. For example: <code>gallery-home-drum-kit.jpg</code>, <code>gallery-studio-recording.jpg</code>, <code>gallery-portrait.jpg</code>, and <code>gallery-marimba.jpg</code>.</div>
+  <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="note">Keep the uploaded image filenames exactly as they are in the <strong>images</strong> folder. You only need to update the entries in the JavaScript array below if the filenames change.</div>
 </section>
 
 </main>
 <footer><div class="container footer-inner"><span>© 2026 Carter Cruz</span><a href="index.html">Back home</a></div></footer>
 
 <script>
+const galleryEntries = [
+  {
+    src: 'images/IMG_1234.jpg',
+    alt: 'Carter playing a full drum kit in a home rehearsal space',
+    caption: 'Home rehearsal setup'
+  },
+  {
+    src: 'images/IMG_1235.jpg',
+    alt: 'Carter in a studio rehearsal setup with drums, lights, and camera gear',
+    caption: 'Studio recording session'
+  },
+  {
+    src: 'images/IMG_1236.jpg',
+    alt: 'Portrait of Carter Cruz with glasses, long hair, and drumsticks',
+    caption: 'Portrait study'
+  },
+  {
+    src: 'images/IMG_1237.jpg',
+    alt: 'Carter performing on a large marimba in a concert hall',
+    caption: 'Live marimba performance'
+  }
+];
+
+const galleryGrid = document.getElementById('galleryGrid');
+
+if (galleryGrid) {
+  galleryEntries.forEach((entry) => {
+    const figure = document.createElement('figure');
+    figure.className = 'gallery-item';
+
+    const img = document.createElement('img');
+    img.src = entry.src;
+    img.alt = entry.alt;
+    img.loading = 'lazy';
+    img.onerror = function () {
+      this.style.display = 'none';
+      const placeholder = document.createElement('div');
+      placeholder.className = 'gallery-placeholder';
+      placeholder.innerHTML = '<strong>Image</strong><span>Upload required</span>';
+      figure.insertBefore(placeholder, figure.lastChild);
+    };
+
+    const figcaption = document.createElement('figcaption');
+    figcaption.textContent = entry.caption;
+
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+    galleryGrid.appendChild(figure);
+  });
+}
+
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 if (menuToggle && navLinks) {
